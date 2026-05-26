@@ -11,6 +11,7 @@ class Util
   end
 
   def gerar_titulo(texto)
+    limpar_tela
     largura = IO.console.winsize[1]
     linha(largura)
     texto_centralizado(texto, largura)
