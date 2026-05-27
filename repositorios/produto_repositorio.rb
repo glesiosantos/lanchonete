@@ -4,7 +4,7 @@ class ProdutoRepositorio
     @produtos = []
   end
 
-  def add produto
+  def add(produto)
     @produtos.push produto
   end
 

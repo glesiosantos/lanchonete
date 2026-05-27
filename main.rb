@@ -1,7 +1,10 @@
 require_relative "lib/util"
 require_relative "views/produto_view"
+require_relative "repositorios/produto_repositorio"
 
 tela = Util.new
+produto_repo = ProdutoRepositorio.new
+produto_view = ProdutoView.new produto_repo
 loop = true
 
 while loop
@@ -17,17 +20,12 @@ while loop
       loop = false
     when 1
       tela.gerar_titulo "SL - PRODUTO"
-      produto_view = ProdutoView.new
       produto_view.menu_produto
     when 2 
-      p "Janela de cliente"
+      
     when 3
       p "Janela de Pedido"
     else
       p "Ops! Opção invalida"
     end
 end  
-
-
-
-
